@@ -5,24 +5,10 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-<!--    <EditText-->
-<!--        android:id="@+id/editText"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:hint="Введите текст" />-->
-
-    <Button
-        android:id="@+id/button1"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/main_fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Кнопка 1"
-        android:layout_marginTop="16dp" />
-
-<!--    <Button-->
-<!--        android:id="@+id/button2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Кнопка 2"-->
-<!--        android:layout_marginTop="8dp" />-->
+        android:layout_height="match_parent">
+    </androidx.fragment.app.FragmentContainerView>
 
 </LinearLayout>

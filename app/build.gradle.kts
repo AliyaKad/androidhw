@@ -6,6 +6,9 @@ plugins {
 android {
     namespace = "ru.itis.newproject"
     compileSdk = 34
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "ru.itis.newproject"

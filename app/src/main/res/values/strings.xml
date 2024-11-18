@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">newProject</string>
     <string name="go_to_the_next">go to the next</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to_second_screen">перейти на 2-й экран</string>
+    <string name="write_text">Введите текст</string>
+    <string name="go_to_third_screen">перейти на 3-й экран</string>
+    <string name="first_screen">Экран 1</string>
+    <string name="second_screen">Экран 2</string>
+    <string name="third_screen">Экран 3</string>
+    <string name="open_bottom_sheet">Открыть Bottom Sheet</string>
+    <string name="send">Отправить</string>
 </resources>
