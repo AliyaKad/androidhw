@@ -1,5 +1,6 @@
 package ru.itis.newproject
 
+import Swipe
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -32,6 +34,9 @@ class MainFragment : Fragment() {
 
         adapter = MyAdapter(DataContainer.items, this)
         recyclerView.adapter = adapter
+
+        val itemTouchHelper = ItemTouchHelper(Swipe(adapter))
+        itemTouchHelper.attachToRecyclerView(recyclerView)
 
         view.findViewById<Button>(R.id.button_list).setOnClickListener {
             setListView()
@@ -91,5 +96,10 @@ class MainFragment : Fragment() {
             .replace(R.id.main_fragment_container, detailFragment)
             .addToBackStack(null)
             .commit()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        recyclerView.adapter = null
     }
 }

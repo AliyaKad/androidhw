@@ -23,25 +23,27 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         val args = arguments
         val imageUrl = args?.getString("imageUrl") ?: ""
         val title = args?.getString("title") ?: "Заголовок"
         val description = args?.getString("description") ?: "Описание"
 
-
         val imageView = view.findViewById<ImageView>(R.id.image_view)
         val titleTextView = view.findViewById<TextView>(R.id.title_text_view)
         val descriptionTextView = view.findViewById<TextView>(R.id.description_text_view)
-
         Glide.with(imageView.context)
             .load(imageUrl)
             .into(imageView)
+
         titleTextView.text = title
         descriptionTextView.text = description
     }
+
     override fun onDestroyView() {
-        Log.d("DetailFragment", "onDestroyView called")
+        val imageView = view?.findViewById<ImageView>(R.id.image_view)
+        imageView?.let {
+            Glide.with(it.context).clear(it)
+        }
         super.onDestroyView()
     }
 }

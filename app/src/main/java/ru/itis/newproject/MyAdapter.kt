@@ -1,5 +1,6 @@
 package ru.itis.newproject
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +32,31 @@ class MyAdapter(private val items: MutableList<Item>, private val fragment: Main
         holder.itemView.setOnClickListener {
             fragment.openDetailFragment(item)
         }
+
+        holder.itemView.setOnLongClickListener {
+            showDeleteConfirmationDialog(position)
+            true
+        }
+    }
+
+    private fun showDeleteConfirmationDialog(position: Int) {
+        val dialogBuilder = AlertDialog.Builder(fragment.requireContext())
+        dialogBuilder.setMessage("Вы уверены, что хотите удалить этот элемент?")
+            .setCancelable(false)
+            .setPositiveButton("Да") { dialog, id ->
+                removeItem(position)
+            }
+            .setNegativeButton("Нет") { dialog, id ->
+                dialog.dismiss()
+            }
+
+        val alert = dialogBuilder.create()
+        alert.show()
+    }
+
+    fun removeItem(position: Int) {
+        items.removeAt(position)
+        notifyItemRemoved(position)
     }
 
 
