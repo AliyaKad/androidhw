@@ -11,4 +11,14 @@
     <string name="third_screen">Экран 3</string>
     <string name="open_bottom_sheet">Открыть Bottom Sheet</string>
     <string name="send">Отправить</string>
+    <string name="write_quantity">Введите количество</string>
+    <string name="add_to_random_positions">Добавить на случайные позиции</string>
+    <string name="delete_random_positions">Удалить на случайные позиции</string>
+    <string name="add_one_element">Добавить один элемент на случайную позицию</string>
+    <string name="delete_one_element">Удалить случайный элемент</string>
+    <string name="list">Список</string>
+    <string name="web">Сетка</string>
+    <string name="image">Image</string>
+    <string name="header">Заголовок</string>
+    <string name="description">Описание</string>
 </resources>

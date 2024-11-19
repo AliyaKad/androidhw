@@ -23,14 +23,14 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Список" />
+                    android:text="@string/list" />
 
                 <Button
                     android:id="@+id/button_grid"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="Сетка" />
+                    android:text="@string/web" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView

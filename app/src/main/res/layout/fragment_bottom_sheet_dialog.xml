@@ -9,30 +9,30 @@
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите количество"
+        android:hint="@string/write_quantity"
         android:inputType="number" />
 
     <Button
         android:id="@+id/button_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Добавить на случайные позиции" />
+        android:text="@string/add_to_random_positions" />
 
     <Button
         android:id="@+id/button_remove"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Удалить на случайные позиции" />
+        android:text="@string/delete_random_positions" />
 
     <Button
         android:id="@+id/button_add_single"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Добавить один элемент на случайную позицию" />
+        android:text="@string/add_one_element" />
 
     <Button
         android:id="@+id/button_remove_single"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Удалить случайный элемент" />
+        android:text="@string/delete_one_element" />
 </LinearLayout>
