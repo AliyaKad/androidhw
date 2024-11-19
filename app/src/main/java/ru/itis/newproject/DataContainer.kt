@@ -17,7 +17,7 @@ object DataContainer {
         Item("sixth_id", "Медведь", "https://avatars.mds.yandex.net/i?id=27b1f2c71cc657f9cf20765cd3765d361e10f3c5-4564957-images-thumbs&n=13", "Большое млекопитающее, известное своей силой и величественным видом."),
         Item("seventh_id", "Волк", "https://avatars.mds.yandex.net/i?id=df5f25c93cbb3986ad5bf09a4e468b2376cfaf44-5896148-images-thumbs&n=13", "Дикий хищник, известный своей социальной структурой и охотничьими навыками."),
         Item("eighth_id", "Лиса", "https://avatars.mds.yandex.net/i?id=82a8de403bfefb8a215569166a78ea479a3d94ff-8497019-images-thumbs&n=13", "Умное и хитрое животное, часто ассоциируемое с ловкостью."),
-        Item("ninth_id", "Белка", "https://avatars.mds.yandex.net/i?id=40cb2db02ffd82b6ff92ae91ca740379_l-7185373-images-thumbs&n=13", "Маленькое грызун, известный своими акробатическими способностями."),
+        Item("ninth_id", "Белка", "https://avatars.mds.yandex.net/i?id=40cb2db02ffd82b6ff92ae91ca740379_l-7185373-images-thumbs&n=13", "Маленький грызун, известный своими акробатическими способностями."),
         Item("tenth_id", "Сова", "https://avatars.mds.yandex.net/i?id=b0b79f5e0a6afe713d80dbdbce71f0ea2818e541-7043127-images-thumbs&n=13", "Ночная птица, известная своим острым зрением и характерным звуком."),
         Item("eleventh_id", "Жираф", "https://avatars.mds.yandex.net/i?id=9db3af90e8af477f0a5ba892b16e9189296ef6ba-12629451-images-thumbs&n=13", "Самое высокое наземное животное, известное своим длинным шеей."),
         Item("twelfth_id", "Слон", "https://avatars.mds.yandex.net/i?id=8851a033854823cf1b8f34a8657dd6c7f811059b-5365143-images-thumbs&n=13", "Крупное млекопитающее с характерным хоботом и большими ушами."),
@@ -40,11 +40,11 @@ object DataContainer {
         Item("twenty_ninth_id", "Жук", "https://avatars.mds.yandex.net/i?id=f67e7a384cddb296ac12b4f46e5ce46c110d7210-5905988-images-thumbs&n=13", "Насекомое, известное своим появлением весной."),
         Item("thirtieth_id", "Дельфин", "https://avatars.mds.yandex.net/i?id=e9163c29f8e84f2f7ee3d1871af69d6c423d5273bc68f9cc-12935956-images-thumbs&n=13", "Умное морское млекопитающее, известное своей игривостью и дружелюбием."),
         Item("thirty_first_id", "Жаба", "https://a.d-cd.net/a6d30ees-960.jpg", "Амфибия, известная своей способностью прыгать и адаптироваться к различным условиям среды."),
-        Item("thirty_second_id", "Панда", "https://cdn.culture.ru/images/b8be4de7-09da-5f22-b268-a3313756e088", "Медлительное млекопитающее, питающееся бамбуком, символ дружелюбия и защиты окружающей среды."),
+        Item("thirty_second_id", "Панда", "https://avatars.mds.yandex.net/i?id=a8f95e30b3b4658da0fb0cc7b92b8819_l-5231719-images-thumbs&n=13", "Медлительное млекопитающее, питающееся бамбуком, символ дружелюбия и защиты окружающей среды."),
         Item("thirty_third_id", "Обезьяна", "https://avatars.mds.yandex.net/i?id=1d144a33cde87579ab736efb8b658099_l-5233118-images-thumbs&n=13", "Социальное млекопитающее, известное своей умностью и игривостью, обитающее в тропических лесах.")
     )
 
-    val items = allItems.take(15).shuffled().toMutableList()
+    val items = allItems.take(25).shuffled().toMutableList()
 
     fun addItems(count: Int) {
         val additionalItems = allItems.shuffled().take(count)
