@@ -21,4 +21,6 @@
     <string name="image">Image</string>
     <string name="header">Заголовок</string>
     <string name="description">Описание</string>
+    <string name="back_button">Назад</string>
+    <string name="next_button">Далее</string>
 </resources>
