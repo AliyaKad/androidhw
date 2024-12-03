@@ -1,20 +1,38 @@
-<!-- res/layout/bottom_sheet_layout.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/bottom_sheet_edit_text"
+        android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/write_text" />
+        android:hint="@string/write_quantity"
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/bottom_sheet_button"
+        android:id="@+id/button_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/send"
-        android:enabled="false" />
+        android:text="@string/add_to_random_positions" />
+
+    <Button
+        android:id="@+id/button_remove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_random_positions" />
+
+    <Button
+        android:id="@+id/button_add_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_one_element" />
+
+    <Button
+        android:id="@+id/button_remove_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_one_element" />
 </LinearLayout>

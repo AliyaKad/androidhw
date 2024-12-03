@@ -6,19 +6,14 @@ import ru.itis.newproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-
-    private val mainContainerId: Int = R.id.main_fragment_container
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction().add(mainContainerId, Fragment1()).commit()
-    }
-
-    private companion object {
-        private const val HEADER_KEY = "PAGE_HEADER"
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.main_fragment_container, MainFragment())
+                .commit()
+        }
     }
 }
