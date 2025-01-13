@@ -1,5 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+    <style name="GreenButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="GreenToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/green</item>
+        <item name="android:titleTextColor">@color/white</item>
+    </style>
+
+    <style name="GreenEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+
+    <style name="RedButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="RedToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/red</item>
+        <item name="android:titleTextColor">@color/white</item>
+    </style>
+
+    <style name="RedEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="YellowButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/yellow</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="YellowToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/yellow</item>
+        <item name="android:titleTextColor">@color/white</item>
+    </style>
+
+    <style name="YellowEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">12dp</item>
     </style>
 </resources>

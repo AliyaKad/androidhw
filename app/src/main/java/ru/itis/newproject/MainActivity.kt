@@ -1,43 +1,52 @@
 package ru.itis.newproject
 
 import android.os.Bundle
-import androidx.activity.viewModels
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.viewpager2.widget.ViewPager2
-import ru.itis.newproject.hw3.QuestionAdapter
-import ru.itis.newproject.hw3.QuestionFragment
-import ru.itis.newproject.hw3.QuizViewModel
+import ru.itis.newproject.hw4.NotificationsFragment
 
-class MainActivity : AppCompatActivity(), QuestionFragment.OnNextButtonClickListener {
+class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewPager: ViewPager2
-    private lateinit var adapter: QuestionAdapter
-    private val quizViewModel: QuizViewModel by viewModels()
+    private var currentTheme: Int = R.style.AppTheme
+    companion object {
+        private var isNotificationShown: Boolean = false
+        private const val THEME_KEY = "current_theme"
+        private const val LAUNCHED_FROM_NOTIFICATION_KEY = "launched_from_notification"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (savedInstanceState != null) {
+            currentTheme = savedInstanceState.getInt(THEME_KEY, R.style.AppTheme)
+        }
+
+        setTheme(currentTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewPager = findViewById(R.id.viewPager)
-        adapter = QuestionAdapter(this, quizViewModel)
-        viewPager.adapter = adapter
-    }
+        if (!isNotificationShown && intent.getBooleanExtra(LAUNCHED_FROM_NOTIFICATION_KEY, false)) {
+            showLaunchNotificationToast()
+            isNotificationShown = true
+        }
 
-    override fun onAnswerSelected(position: Int, answer: String) {
-        quizViewModel.selectedAnswers[position] = answer
-    }
-
-    override fun onNextButtonClicked() {
-        val nextItem = viewPager.currentItem + 1
-        if (nextItem < adapter.itemCount) {
-            viewPager.currentItem = nextItem
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, NotificationsFragment())
+                .commit()
         }
     }
 
-    override fun onBackButtonClicked() {
-        val previousItem = viewPager.currentItem - 1
-        if (previousItem >= 0) {
-            viewPager.currentItem = previousItem
-        }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(THEME_KEY, currentTheme)
+    }
+
+    fun setAppTheme(theme: Int) {
+        currentTheme = theme
+        recreate()
+    }
+
+    private fun showLaunchNotificationToast() {
+        Toast.makeText(this, getString(R.string.launched_from_notification_message), Toast.LENGTH_SHORT).show()
     }
 }

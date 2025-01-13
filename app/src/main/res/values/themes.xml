@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.NewProject" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_200</item>
+        <item name="colorAccent">@color/GREEN</item>
+        <item name="iconColor">@color/GREEN</item>
+    </style>
+
+    <style name="GreenTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green_dark</item>
+        <item name="colorAccent">@color/green_dark</item>
+        <item name="iconColor">@color/green</item>
+        <item name="buttonStyle">@style/GreenButton</item>
+        <item name="toolbarStyle">@style/GreenToolbar</item>
+        <item name="editTextStyle">@style/GreenEditText</item>
+    </style>
+
+    <style name="RedTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/red_dark</item>
+        <item name="colorAccent">@color/red_dark</item>
+        <item name="iconColor">@color/red</item>
+        <item name="buttonStyle">@style/RedButton</item>
+        <item name="toolbarStyle">@style/RedToolbar</item>
+        <item name="editTextStyle">@style/RedEditText</item>
+    </style>
+
+    <style name="YellowTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryDark">@color/yellow_dark</item>
+        <item name="colorAccent">@color/yellow_dark</item>
+        <item name="iconColor">@color/yellow</item>
+        <item name="buttonStyle">@style/YellowButton</item>
+        <item name="toolbarStyle">@style/YellowToolbar</item>
+        <item name="editTextStyle">@style/YellowEditText</item>
+    </style>
 </resources>
