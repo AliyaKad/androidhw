@@ -23,4 +23,14 @@
     <string name="description">Описание</string>
     <string name="back_button">Назад</string>
     <string name="next_button">Далее</string>
+    <string name="empty_title_error">Заголовок не может быть пустым</string>
+    <string name="empty_text_error">Текст не может быть пустым</string>
+    <string name="launched_from_notification_message">Приложение было запущено из уведомления</string>
+    <string name="image_selection_error">Не удалось загрузить изображение</string>
+    <string name="notification_header">Заголовок уведомления</string>
+    <string name="notification_text">Текст уведомления</string>
+    <string name="show_notifications">Показать уведомление</string>
+    <string name="to_app_theme">Сбросить цвет</string>
+    <string name="not_empty_image">фото уже загружено</string>
+
 </resources>
